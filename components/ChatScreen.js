@@ -32,20 +32,7 @@ import ActionButtons from './ActionButtons';
     
       componentWillMount() {
         this.setState({
-          messages: [
-            {
-              _id: Math.round(Math.random() * 1000000),
-              type: 'bell',
-              text: 'info',
-              createdAt: new Date(),
-              image: 'https://www.w3schools.com/css/trolltunga.jpg',
-              user: {
-                _id: 2,
-                name: 'React Native',
-                avatar: 'https://facebook.github.io/react/img/logo_og.png',
-              },
-            },
-          ],
+          messages: [],
         });
       }
     
@@ -73,12 +60,6 @@ import ActionButtons from './ActionButtons';
         return (
           <Bubble
             {...props}
-            wrapperStyle={{
-              left: {
-                backgroundColor: 'blue',
-                width: 300,
-              }
-            }}
           />
         );
       }
